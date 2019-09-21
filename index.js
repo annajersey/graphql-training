@@ -7,7 +7,16 @@ const app = express();
 app.get('/', (req,res) => {
     res.send("test")
 });
-const root = {hello: () => "Hello"}
+const root = {friend: () => {
+    return{
+        "id": 17,
+        "firstName": "qwe",
+        "lastName": "yu",
+        "gender": "jfgj",
+        "language": "gjfgh",
+        "email": "hgfcx"
+    }
+    }}
 app.use('/graphqltest', graphqlHTTP({
     schema,
     rootValue: root,
