@@ -1,8 +1,5 @@
-import graphqlHTTP from "./index";
-import schema from "./schema";
-
 class Friend{
-    constructor(id, {firstName, lastName, gender, language, email, age}){
+    constructor(id, {firstName, lastName, gender, language, email, age, contacts}){
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -10,6 +7,7 @@ class Friend{
         this.language = language;
         this.email = email;
         this.gender = gender;
+        this.contacts = contacts;
     }
 }
 

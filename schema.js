@@ -1,6 +1,7 @@
 import {buildSchema} from 'graphql';
 
 const schema = buildSchema(`
+
         type Friend{
             id: ID,
             firstName: String,
@@ -8,8 +9,14 @@ const schema = buildSchema(`
             gender: Gender,
             age: Int,
             language: String,
-            email: String
+            email: String,
+            contacts: [Contact]
         }
+        type Contact{
+            
+            firstName: String,
+            lastName: String
+            }
         type Query{
             getFriend(id: ID): Friend
         }
@@ -25,7 +32,13 @@ const schema = buildSchema(`
             age: Int,
             gender: Gender,
             language: String,
-            email: String
+            email: String,
+            contacts: [ContactInput]
+        }
+        input ContactInput{
+           
+            firstName: String
+            lastName: String
         }
         type Mutation{
             createFriend(input: FriendInput): Friend

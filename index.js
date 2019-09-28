@@ -14,7 +14,7 @@ app.use('/graphqltest', graphqlHTTP({
     rootValue: root,
     graphiql: true
 }))
-app.listen(8080, () => console.log("sfsakalskjg"));
+app.listen(8080, () => console.log("running"));
 
 
 
